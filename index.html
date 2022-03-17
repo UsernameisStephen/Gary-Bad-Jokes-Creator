@@ -15,17 +15,7 @@
 </head>
 
 <body>
-    <!-- header -->
     <header>
-        <nav>
-            <h1>The Group 2 </h1>
-            <h3>Joke Generator </h3>
-            <h4>select what kind of joke you like </h4>
-            <h4>
-                <marquee>Did this work?</marquee>
-            </h4>
-        </nav>
-
     </header>
 
     <main class="pb-5">
@@ -33,7 +23,7 @@
             <h3>Pick a category:</h3>
             <form>
                 <!-- bootstrap form -->
-                <div class="form-check">
+                <div class="form-check" style="float: right;">
                     <input class="form-check-input" type="radio" name="category" id="programming" value="programming">
                     <label class="form-check-label" for="programming">Programming</label>
                 </div>
@@ -52,45 +42,21 @@
             </form>
         </section>
 
+        <!-- Get joke button  -->
 
-        <!-- I I made a bootstrap card and moved some things into it so i could test..  -->
-        <!-- bootstrap card -->
-        <div class="card" style="width: 25rem; height: 100rem;">
-            <!-- <img class="card-img-top" src="https://i.imgflip.com/30b1gx.jpg" alt="Card image cap"> -->
-            <div class="card-body">
-                <h5 class="card-title">Jokes!!</h5>
 
+        <!-- Container that will display the joke -->
+        <div class="display-joke container col-lg-8 my-5">
+            <div class="row"></div>
+            <div class="gary col-lg-5"></div>
+            <section class="btn-container">
+                <button class="gary-btn"></button>
+            </section>
+            <div class="joke-container col-lg-7">
+                <img src="../project-1/assets/img/thought-btn.png" alt="">
             </div>
-            <!-- Container that will display the joke ........I moved joke container into bootstrap card -->
-            <div class="display-joke container col-lg-8 my-5">
-                <div class="row">
-                    <div class="gary col-lg-5">
-
-                    </div>
-                    <div class="circular">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-                    <div class="joke-container col-lg-7">
-                        <!-- (E) CIRCULAR BUBBLE -->
-
-                        <!-- <p class="card-text joke speech">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                        <!-- <p class="joke">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, non? Alias beatae nisi nihil dolores totam architecto consequatur odio tempora.</p> -->
-                    </div>
-                </div>
-            </div>
-            <!-- End of joke container -->
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-            <a href="#" class="btn btn-primary">
-                <!--!!ATT: Neema: Get joke button  ----------- I moved gary button into button bootstrap card button primary class --Jonathan-->
-                <section class="btn-container">
-                    <button class="gary-btn"></button>
-                    <!-- End of gary button -->
-                </section>Click Me!!
-            </a>
         </div>
         </div>
-
-
 
     </main>
 
@@ -100,18 +66,21 @@
     </head>
 
     <body>
-        <!-- !!ATT!!: Joseph.. i moved into bootstrap card clas="card-image-top"--Jonathan  -->
+
         <!-- <div class="main">
         create image tag here
         <img src="https://i.imgflip.com/30b1gx.jpg"/>
     </div> -->
 
+        <marquee>Did this work?</marquee>
 
-        <div>test1</div>
+        <section class="container">
+
+            <div>test1</div>
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="./script.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script src="./script.js"></script>
 
     </body>
 
