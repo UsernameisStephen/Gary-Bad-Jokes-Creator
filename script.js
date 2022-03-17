@@ -1,9 +1,11 @@
 var main = $('.main');
 
 
-function generateMeme(){
+function generateJoke(){
 
-    var requestUrl = 'https://api.imgflip.com/get_memes'
+    var category = $("input[type='radio']:checked").val();
+    var requestUrl =
+      `https://v2.jokeapi.dev/joke/${category}?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single`;
 
 
     fetch(requestUrl)
@@ -11,20 +13,15 @@ function generateMeme(){
         return response.json();
     })
     .then(function(data) {
-        var memesArray = data.data.memes;
-        console.log(memesArray)
-
-        memesArray.forEach(item => {
-            var url = item.url
-
-            var img = $(`<img src=${url} alt="meme">`);
-            main.append(img);
-        })
-    })
-
+        var jokesArray = data.joke;
+        var joke_1 = $('.joke')
+        joke_1.textContent = jokesArray;
+    })   
 }
 
-generateMeme();
+generateJoke();
+
+
 
 
 
