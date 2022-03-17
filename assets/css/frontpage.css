@@ -1,5 +1,4 @@
 body {
-    background-color:yellow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,4 +7,16 @@ body {
 
 .gary-logo:hover {
     transform: scale(1.1);
+}
+
+
+/* ------ STYLING FOR THE BACKGROUND ------ */
+
+#bg-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -999;
 }
