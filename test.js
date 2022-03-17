@@ -1,3 +1,4 @@
+
 var displayContainer = $('.display-joke'); // contains the joke
 
 
@@ -9,3 +10,4 @@ var displayContainer = $('.display-joke'); // contains the joke
 
 // joke api link: https://sv443.net/jokeapi/v2/
 // note: blacklist all inappropriate content
+
