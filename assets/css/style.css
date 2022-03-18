@@ -56,6 +56,11 @@ main {
     height: 300px;
 }
 
+.gary-head:hover {
+    transform: rotate(10deg);
+}
+
+
 
 /* ------ JOKE SECTION ------ */
 .gary-head-container {
@@ -68,8 +73,10 @@ main {
 
 .display-joke {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    /* flex-direction: row; */
 }
 
 .side-by-side {
@@ -85,6 +92,10 @@ main {
 
 #gary-head {
     transform: scale(1.5);
+}
+
+#gary-head:hover {
+    transform: scale(1.5) rotate(10deg);
 }
 
 #speech-bubble {
@@ -112,7 +123,12 @@ main {
     height: 130px;
     top: 90px;
     left: 70px;
-    
+}
+
+.save-btn {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
 }
 
 /* ------ STYLING FOR THE BACKGROUND ------ */
