@@ -1,5 +1,4 @@
 var main = $('.main');
-var garyLogo = $(".gary-logo");
 const garyHead = $("#gary-head-button");
 const garyHead_Reset = $("#gary-head");
 const jokeContainer = $(".display-joke");
@@ -41,13 +40,6 @@ function generateJoke() {
 }
 
 generateJoke();
-
-
-garyLogo.on("click", function () {
-    const music = new Audio('./assets/audio/boy-says-volcano-2439.wav');
-    music.play();
-});
-
 
 
 
