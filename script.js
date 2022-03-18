@@ -1,7 +1,24 @@
 var main = $('.main');
 var garyLogo = $(".gary-logo");
-const garyHead = $("#gary-head");
+const garyHead = $("#gary-head-button");
+const garyHead_Reset = $("#gary-head");
+const jokeContainer = $(".display-joke");
+const btnContainer = $(".btn-container");
 
+// this means: when page is loaded and jquery is ready, hide the joke container
+$(document).ready(function () {
+    jokeContainer.hide();
+});
+// Add a reset button Gary head
+garyHead_Reset.on('click', function() {
+    generateJoke();
+})
+// Garyhead click button 
+garyHead.on("click", function () {
+    btnContainer.hide();
+    jokeContainer.show();
+    generateJoke();
+});
 
 function generateJoke() {
 
@@ -9,7 +26,7 @@ function generateJoke() {
 
     var categoryOrDefault = (category || 'Programming,Misc,Pun,Spooky,Christmas');
 
-    var requestUrl = 'https://v2.jokeapi.dev/joke/' + categoryOrDefault + '?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
+    var requestUrl = 'https://v2.jokeapi.dev/joke/' + categoryOrDefault + '?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single ';
 
     fetch(requestUrl)
         .then(function (response) {
@@ -18,34 +35,12 @@ function generateJoke() {
         .then(function (data) {
             var jokesArray = data.joke;
             var joke_1 = $('.joke')
-            joke_1.textContent = jokesArray;
+            joke_1.text(jokesArray);
+            // console.log(jokesArray)
         })
 }
 
 generateJoke();
-
-garyHead.on("click", function () {
-    console.log(generateJoke());
-    generateJoke();
-});
-
-
-// move variables to top of page
-const jokeContainer = $(".display-joke");
-const garyBtnContainer = $(".btn-container");
-const joke = $(".joke") //the joke text box
-
-// move to top after all the variables
-// this means: when page is loaded and jquery is ready, hide the joke container
-$(document).ready(function () {
-    jokeContainer.hide();
-});
-
-
-// add this to garyHead click event listener
-btnContainer.hide();
-displayJokeContainer.show();
-
 
 
 garyLogo.on("click", function () {
