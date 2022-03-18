@@ -121,3 +121,42 @@ main {
     left: 0;
     z-index: -999;
 }
+
+@media (max-width: 830px) {
+    #bg-wrap {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -999;
+        width: 300%;
+        height: 500%;
+    }
+}
+
+@media (max-width: 607px) {
+    #bg-wrap {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -999;
+        width: 500%;
+        width: 500%;
+    }
+}
+
+@media (max-width: 367px) {
+    #bg-wrap {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -999;
+        width: 700%;
+        height: 700%
+    }
+}
