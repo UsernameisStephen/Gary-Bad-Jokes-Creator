@@ -21,9 +21,9 @@
     <main class="pb-5">
         <section class="input-container my-4">
             <h3>Pick a category:</h3>
-            <form>
+            <form class="category-form">
                 <!-- bootstrap form -->
-                <div class="form-check" style="float: right;">
+                <div class="form-check">
                     <input class="form-check-input" type="radio" name="category" id="programming" value="programming">
                     <label class="form-check-label" for="programming">Programming</label>
                 </div>
@@ -46,17 +46,17 @@
 
 
         <!-- Container that will display the joke -->
-        <div class="display-joke container col-lg-8 my-5">
-            <div class="row"></div>
-            <div class="gary col-lg-5"></div>
-            <section class="btn-container">
-                <button class="gary-btn"></button>
-            </section>
-            <div class="joke-container col-lg-7">
-                <img src="../project-1/assets/img/thought-btn.png" alt="">
-                <div class="joke"></div>
-            </div>
-        </div>
+        <div class="display-joke container my-5">
+            <div class="side-by-side">
+                <!-- <div class="gary"></div> -->
+                <section class="btn-container">
+                    <button id="gary-head" class="gary-btn"></button>
+                </section>
+                <div class="joke-container">
+                    <img id="speech-bubble" src="../project-1/assets/img/thought-btn.png" alt="">
+                    <div class="joke"></div>
+                </div>
+            </div>  
         </div>
 
     </main>
