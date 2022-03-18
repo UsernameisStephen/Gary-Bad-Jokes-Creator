@@ -3,6 +3,8 @@ const garyHead = $("#gary-head-button");
 const garyHead_Reset = $("#gary-head");
 const jokeContainer = $(".display-joke");
 const btnContainer = $(".btn-container");
+var joke_1 = $('.joke')
+var storedJokes = []
 
 // this means: when page is loaded and jquery is ready, hide the joke container
 $(document).ready(function () {
@@ -33,15 +35,70 @@ function generateJoke() {
         })
         .then(function (data) {
             var jokesArray = data.joke;
-            var joke_1 = $('.joke')
             joke_1.text(jokesArray);
-            // console.log(jokesArray)
         })
 }
 
-generateJoke();
 
+  
+  // This function is being called below and will run when the page loads.
+//   function init() {
+//     // Get stored storedJokes from localStorage
+//     var storedstoredJokes = JSON.parse(localStorage.getItem("storedJokes"));
+  
+//     // If storedJokes were retrieved from localStorage, update the storedJokes array to it
+//     if (storedstoredJokes !== null) {
+//       storedJokes = storedstoredJokes;
+//     }
+  
+//     // This is a helper function that will render storedJokes to the DOM
+//   }
+  
+  function storestoredJokes() {
+    // Stringify and set key in localStorage to storedJokes array
+    localStorage.setItem("storedJokes", JSON.stringify(storedJokes));
+  }
+  
+  // Add submit event to form
+  $(".save-btn").on("click", function (){
+    
+    
+    var jokeText = joke_1.text();
+  
+    // Return from function early if submitted jokeText is blank
+    if (jokeText === "") {
+      return;
+    }
+  
+    // Add new jokeText to storedJokes array, clear the input
+    storedJokes.push(jokeText);
 
+  
+    // Store updated storedJokes in localStorage, re-render the list
+    storestoredJokes();
+  });
+  
+
+//   function renderstoredJokes() {
+//     // Clear todoList element and update todoCountSpan
+//     todoList.innerHTML = "";
+//     todoCountSpan.textContent = storedJokes.length;
+  
+    // Render a new li for each todo
+//     for (var i = 0; i < storedJokes.length; i++) {
+//       var todo = storedJokes[i];
+  
+//       var li = document.createElement("li");
+//       li.textContent = todo;
+//       li.setAttribute("data-index", i);
+  
+//       var button = document.createElement("button");
+//       button.textContent = "Complete ✔️";
+  
+//       li.appendChild(button);
+//       todoList.appendChild(li);
+//     }
+//   }
 
 
 
