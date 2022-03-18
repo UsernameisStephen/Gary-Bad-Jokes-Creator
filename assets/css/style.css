@@ -27,17 +27,13 @@ main {
     /* align-items: center; */
 }
 
-/* .joke-container .col-lg-7 {
-    position: relative;
-    background-image: url('../img/thought-btn.png');
-    background-size: cover;
-    background-position: top center;
+.input-container {
+    /* border: 1px solid black; */
+}
 
-} */
-
-
-
-
+.category-form {
+    /* border: 1px solid black; */
+}
 
 
 
@@ -66,32 +62,33 @@ main {
 
 
 /* ------ JOKE SECTION ------ */
-.display-joke .container .col-lg-8 .my-5 {
+.display-joke {
     display: flex;
-    justify-content: center;
-
-    /* position:absolute; */
-    /* z-index: -1; */
-
+    justify-content: flex-start;
+    flex-direction: row;
+    /* border: 1px solid black; */
 }
 
-.joke-container .col-lg-7 {
-    position: absolute;
-
-}
-
-.row {
+.side-by-side {
     display: flex;
-    /* position: absolute; */
-    /* top: 20%;
-    left: 50%; */
-    justify-content: center;
-    max-height: 700px;
+    flex-direction: row;
 }
 
+/* .joke-container {
+    border: 1px solid black;
+} */
 
+/* .btn-container {
+    border: 1px solid black;
+} */
 
+#gary-head {
+    transform: scale(1.5);
+}
 
+#speech-bubble {
+    transform: scale(0.7);
+}
 
 .gary {
     position: absolute;
