@@ -42,16 +42,12 @@ main {
 
 .btn-container {
     display: flex;
-    width: 300px;
-    height: 300px;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 
-.gary-btn {
-    /* display: inline; */
-    /* position: relative; */
-    
+
+.gary-head {
     background-image: url("../img/garybutton.png");
     background-size: cover;
     background-color: transparent;
@@ -62,6 +58,14 @@ main {
 
 
 /* ------ JOKE SECTION ------ */
+.gary-head-container {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
 .display-joke {
     display: flex;
     justify-content: center;
