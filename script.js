@@ -1,4 +1,5 @@
 var main = $('.main');
+var garyLogo = $(".gary-logo");
 
 
 function generateJoke(){
@@ -22,11 +23,19 @@ function generateJoke(){
 
 generateJoke();
 
+
 const garyHead = document.getElementById("gary-head");
 button.addEventListener("click", function () {
 console.log(generateJoke());
 generateJoke();
 });
+
+
+
+garyLogo.on("click", function() {
+    const music = new Audio('./assets/audio/boy-says-volcano-2439.wav');
+    music.play();       
+    });
 
 
 
