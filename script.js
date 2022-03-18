@@ -4,9 +4,10 @@ var main = $('.main');
 function generateJoke(){
 
     var category = $("input[type='radio']:checked").val();
-    var requestUrl =
-      `https://v2.jokeapi.dev/joke/${category}?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single`;
 
+    var categoryOrDefault = (category || 'Programming,Misc,Pun,Spooky,Christmas');
+
+    var requestUrl = 'https://v2.jokeapi.dev/joke/' + categoryOrDefault + '?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
 
     fetch(requestUrl)
     .then(function(response) {
