@@ -1,7 +1,9 @@
 var main = $('.main');
 var garyLogo = $(".gary-logo");
+const garyHead = $("#gary-head");
 
-function generateJoke(){
+
+function generateJoke() {
 
     var category = $("input[type='radio']:checked").val();
 
@@ -10,23 +12,21 @@ function generateJoke(){
     var requestUrl = 'https://v2.jokeapi.dev/joke/' + categoryOrDefault + '?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
 
     fetch(requestUrl)
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(data) {
-        var jokesArray = data.joke;
-        var joke_1 = $('.joke')
-        joke_1.textContent = jokesArray;
-    })   
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            var jokesArray = data.joke;
+            var joke_1 = $('.joke')
+            joke_1.textContent = jokesArray;
+        })
 }
 
 generateJoke();
 
-
-const garyHead = document.getElementById("gary-head");
-button.addEventListener("click", function () {
-console.log(generateJoke());
-generateJoke();
+garyHead.on("click", function () {
+    console.log(generateJoke());
+    generateJoke();
 });
 
 
@@ -37,7 +37,7 @@ const joke = $(".joke") //the joke text box
 
 // move to top after all the variables
 // this means: when page is loaded and jquery is ready, hide the joke container
-$(document).ready(function() {
+$(document).ready(function () {
     jokeContainer.hide();
 });
 
@@ -48,10 +48,10 @@ displayJokeContainer.show();
 
 
 
-garyLogo.on("click", function() {
+garyLogo.on("click", function () {
     const music = new Audio('./assets/audio/boy-says-volcano-2439.wav');
-    music.play();       
-    });
+    music.play();
+});
 
 
 
