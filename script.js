@@ -22,6 +22,12 @@ function generateJoke(){
 
 generateJoke();
 
+const garyHead = document.getElementById("gary-head");
+button.addEventListener("click", function () {
+console.log(generateJoke());
+generateJoke();
+});
+
 
 
 
