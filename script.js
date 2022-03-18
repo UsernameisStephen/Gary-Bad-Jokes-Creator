@@ -1,7 +1,6 @@
 var main = $('.main');
 var garyLogo = $(".gary-logo");
 
-
 function generateJoke(){
 
     var category = $("input[type='radio']:checked").val();
@@ -29,6 +28,23 @@ button.addEventListener("click", function () {
 console.log(generateJoke());
 generateJoke();
 });
+
+
+// move variables to top of page
+const jokeContainer = $(".display-joke");
+const garyBtnContainer = $(".btn-container");
+const joke = $(".joke") //the joke text box
+
+// move to top after all the variables
+// this means: when page is loaded and jquery is ready, hide the joke container
+$(document).ready(function() {
+    jokeContainer.hide();
+});
+
+
+// add this to garyHead click event listener
+btnContainer.hide();
+displayJokeContainer.show();
 
 
 
