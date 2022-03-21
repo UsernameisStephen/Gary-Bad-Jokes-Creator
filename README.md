@@ -15,8 +15,11 @@ For this project we wanted to create an app that generates jokes and gives the u
 
 # Contributors
 Andrew Anderson
+
 Stephen Elliott
+
 Jonathan Johnson
+
 Neema Velasco
 
 # Resources
