@@ -5,12 +5,16 @@ For this project we wanted to create an app that generates jokes and gives the u
 
 # Screenshot of Final Pages
 
-
+![Final Page Front Page](./assets/img/garys-bad-jokes.png)
+![Final Page Main Page Before](./assets/img/main-page-before.png)
+![Final Page Main Page After](./assets/img/main-page-after.png)
+![Final Page Saved Page](./assets/img/saved-page.png)
 
 # Link to the Final Page
 
 
-
+[Here is a link to the final page]()
+[Here is a link Github](https://github.com/UsernameisStephen/project-1)
 
 
 # Contributors
