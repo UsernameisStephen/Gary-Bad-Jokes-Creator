@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gary's Bad Jokes | Home</title>
-    <link rel="stylesheet" href="assets/css/frontpage.css">
-</head>
-<body>
+    <title>Gary's Bad Jokes | Main</title>
 
-	<main>
-		<div class="gary-logo">
-			<img src="assets/img/my logo (2).png" alt="gary-bad-jokes-logo"> </img>
-		</div>
-	</main>	
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="assets/img/garys bad jokes header.png" alt="gary's-bad-jokes-logo" width="200px"></a>
+        <a class="saved-jokes-link" href="savedjokes.html">Saved Jokes</a>
+    </header>
+
+    <main class="pb-5">
+        <section class="input-container my-4 mx-4 p-2">
+            <h3>Pick a category:</h3>
+            <form class="category-form px-2 pb-2">
+                <!-- bootstrap form -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="category" id="programming" value="programming">
+                    <label class="form-check-label" for="programming">Programming</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="category" id="pun" value="pun">
+                    <label for="pun">Pun</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="category" id="spooky" value="spooky">
+                    <label class="form-check-label" for="spooky">Spooky</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="category" id="christmas" value="christmas">
+                    <label class="form-check-label" for="christmas">Christmas</label>
+                </div>
+            </form>
+        </section>
+
+        <!-- Get joke button  -->
+        <section class="btn-container">
+            <!-- click on button to generate joke  -->
+            <button id="gary-head-button" class="gary-head"></button>
+        </section>
+
+        <!-- Container that will display the joke -->
+        <div class="display-joke container my-5">
+            <div class="side-by-side">
+                <section class="gary-head-container">
+                    <button id="gary-head" class="gary-head" ></button>
+                </section>
+                <div class="joke-container">
+                    <img id="speech-bubble" src="../project-1/assets/img/thought-btn.png" alt="">
+                    <div class="joke"><!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, inventt sintdasdadaads. nventt sintdasdadaa nventt sintdasdadaa -->
+                    </div>
+                </div>
+            </div>  
+            <div>
+                <button class="save-btn">Save Joke</button>
+            </div>
+        </div>
+    </main>
+
 
     <!-- this is the div for the background animation -->
     <div id="bg-wrap">
@@ -49,9 +103,8 @@
 		</svg>
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="audio.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
-
-
