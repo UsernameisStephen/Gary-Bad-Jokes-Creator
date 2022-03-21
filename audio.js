@@ -7,4 +7,3 @@ garyLogo.on("click", function () {
         location.href = "index.html";
     }, 1500)
 });
-

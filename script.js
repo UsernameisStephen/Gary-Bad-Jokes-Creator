@@ -23,19 +23,36 @@ garyHead.on("click", function () {
 
 function generateJoke() {
 
-    var category = $("input[type='radio']:checked").val();
+    var category = $("input[name='category']:checked").val();
+    console.log(category);
 
     var categoryOrDefault = (category || 'Programming,Misc,Pun,Spooky,Christmas');
 
-    var requestUrl = 'https://v2.jokeapi.dev/joke/' + categoryOrDefault + '?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single ';
+    var requestUrl = 'https://v2.jokeapi.dev/joke/' + categoryOrDefault + '?blacklistFlags=nsfw,religious,political,racist,sexist,explicit ';
+    console.log(requestUrl)
 
     fetch(requestUrl)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            var jokesArray = data.joke;
-            joke_1.text(jokesArray);
+            var jokeCategory = data.category;
+            var jokeType = data.type;
+
+            //note: Christmas and Spooky jokes have two parts (setup and delivery) so API data looks slightly different.
+            if (jokeCategory === "Christmas" || jokeCategory === "Spooky" || jokeType === "twopart" ) {
+              var jokeIntro = data.setup;
+              var jokeMain = data.delivery;
+
+              joke_1.text(`${jokeIntro} ${jokeMain}`)
+
+            } else {
+            
+              var jokesArray = data.joke;
+
+              joke_1.text(jokesArray);
+            }
+            
         })
 }
 
