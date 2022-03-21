@@ -1,14 +1,19 @@
 // global variables
-const text_A = document.querySelector('.text-a');
-const text_B = document.querySelector('.text-b');
-const text_C = document.querySelector('.text-c');
-const storedInput = localStorage.getItem('textDisplay');
+var collection = $('.collection');
 
-if(s)
-saveBtn.addEventListener('click' joke => {
-    text.textContent = joke.target.value;
-});
+//function to get items from local storage and generate a speech bubble dynamically displaying the jokes
+function getJokes(){
+    var favoriteJokes = JSON.parse(localStorage.getItem ('storedJokes'));
+    
+    for (var i=0; i<favoriteJokes.length; i++){
+        var jokeCollection = $(`
+            <div class="joke-collection">
+                <div class="joke">${favoriteJokes[i]}</div>
+            </div>
+        `)
+        console.log(favoriteJokes[i]);
+        collection.append(jokeCollection);
+    }
+} 
+getJokes();
 
-
-//Add local storage save button
-save-btn.addEventListener('click', saveToLocalStorage)
