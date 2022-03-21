@@ -24,4 +24,5 @@ Neema Velasco
 
 # Resources
 https://gscode.in/css-animated-backgrounds/ 
+
 author Yoshiyuki ITO
