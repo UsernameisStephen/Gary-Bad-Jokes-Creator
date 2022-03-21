@@ -50,6 +50,18 @@ header {
     align-items: center;
     padding: 1rem 1rem 0;
     height: 2rem;
+    position: relative;
+}
+
+.main-jokes-link {
+    margin-left: 2rem;
+    color: inherit;
+}
+
+.clear {
+    position: absolute;
+    top: 1rem;
+    right: 20px;
 }
 
 /* ------ STYLING FOR THE BACKGROUND ------ */
