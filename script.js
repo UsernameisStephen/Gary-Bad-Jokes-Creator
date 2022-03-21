@@ -37,15 +37,17 @@ function generateJoke() {
         })
         .then(function (data) {
             var jokeCategory = data.category;
+            var jokeType = data.type;
 
             //note: Christmas and Spooky jokes have two parts (setup and delivery) so API data looks slightly different.
-            if (jokeCategory === "Christmas" || jokeCategory === "Spooky" ) {
+            if (jokeCategory === "Christmas" || jokeCategory === "Spooky" || jokeType === "twopart" ) {
               var jokeIntro = data.setup;
               var jokeMain = data.delivery;
 
               joke_1.text(`${jokeIntro} ${jokeMain}`)
 
             } else {
+            
               var jokesArray = data.joke;
 
               joke_1.text(jokesArray);
