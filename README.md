@@ -13,7 +13,7 @@ For this project we wanted to create an app that generates jokes and gives the u
 # Link to the Final Page
 
 
-[Here is a link to the final page]()
+[Here is a link to the final page](https://usernameisstephen.github.io/Gary-Bad-Jokes-Creator/)
 [Here is a link Github](https://github.com/UsernameisStephen/project-1)
 
 
