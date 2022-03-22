@@ -57,7 +57,7 @@ function generateJoke() {
 
               joke_1.text(jokesArray);
             }
-            
+            typeWriter();
         })
 }
 
@@ -97,3 +97,15 @@ $('.gary-head').hover(
 // $(element).hover(function(), function())
 // -1st function is mouse in
 // -2nd function is mouse out
+
+//function for the typing effect
+var i = 0;
+var speed = 50;
+
+function typeWriter() {
+    if (i < data.joke.length) {
+      document.querySelector(".joke").innerHTML += data.joke.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
