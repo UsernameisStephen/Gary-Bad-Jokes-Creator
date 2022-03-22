@@ -14,11 +14,17 @@ $(document).ready(function () {
 garyHead_Reset.on('click', function() {
     generateJoke();
 })
+
 // Garyhead click button 
 garyHead.on("click", function () {
     btnContainer.hide();
+
     jokeContainer.show();
+    
+
     generateJoke();
+
+    
 });
 
 function generateJoke() {
@@ -75,7 +81,19 @@ function generateJoke() {
     console.log("saved");
   });
   
+$
 
 
+$('.gary-head').hover(
+  function() {
+    $(this).css("background-image", "url('assets/img/garymouth.png')");
+  },
+  function() {
+    $(this).css("background-image", "url('assets/img/garybutton.png')");
+  }
+)
 
-
+// code source: https://api.jquery.com/hover/
+// $(element).hover(function(), function())
+// -1st function is mouse in
+// -2nd function is mouse out
